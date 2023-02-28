@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 export default function Navbar (props) {
+  console.log(props.fontcolor);
   return (
+    <div className={`text-${props.fontcolor}`}>
     <nav className={`navbar navbar-expand-lg navbar-light bg-${props.mode}`}>
       <a className='navbar-brand' href='/'>
         {props.tittle}
@@ -47,6 +49,7 @@ export default function Navbar (props) {
         DarkMode
       </button>
     </nav>
+    </div>
   )
 }
 Navbar.propTypes = {
